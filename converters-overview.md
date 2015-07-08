@@ -8,6 +8,7 @@ parses the LaTeX source assuming that the parsing won't be affected by macro exp
 problems:
 - the rudimentary way it "parses" LaTeX causes issues with verbatim environments and probably with document class files / style files as well
 - doesn't parse whitespace between commands and argument-braces correctly
+- both problems are related to the fact that it guarantees the invariant `fmap render (parseLaTeX t) == Right t`
 
 used by: [cxxdraft-htmlgen](https://github.com/Eelis/cxxdraft-htmlgen)
 
