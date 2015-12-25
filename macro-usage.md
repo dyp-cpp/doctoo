@@ -126,6 +126,9 @@ bitwise \logop{AND} functions of the operands.
 <dt>environment `bnftab`</dt>
 <dd>Defines a nonterminal; the rules are manually indented. Allows additional indentation within the rule [cpp] and line-breaks within a rule, the following line is then continued with one more level of indentation [lex.ccon].
 The non-copied version `ncbnftab` is used sometimes (always?) without any manual indentation, and sometimes (always?) without defining a nonterminal inside the environment.
+
+In many cases, a `bnf` environment is used instead of a `bnftab` environment,
+with a `\hspace*{\bnfindentinc}` instead of additional `\>` indentation.
 </dd>
 
 <dt>environment `simplebnf`</dt>
@@ -146,3 +149,10 @@ It is currently written as `ICS\textit{i}(\tcode{F})` in the LaTeX sources.
 To remove the meaningless `\textit`, improve readability and formatting, a macro `\ICS{i}{F}` has been introduced.
 A similar issue occurs in [conversions] for e.g. `$\mathit{cv}_{1,0}P_0$`
 </dd>
+
+<dt>`\=` (provided by LaTeX)</dt>
+<dd>Special purpose inside `tabbing` environments and tables.
+Used for text alignment.</dd>
+
+<dt>`\kill` (provided by LaTeX)</dt>
+<dd>See the documentation for `tabbing` environments.</dd>
